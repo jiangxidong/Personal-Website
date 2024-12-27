@@ -51,4 +51,4 @@ For any questions or suggestions, please reach out through the contact form on t
 
 ## License
 
-© 2024 Jason Jiang. All rights reserved. 
+© 2025 Jason Jiang. All rights reserved. 
