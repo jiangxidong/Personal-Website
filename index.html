@@ -89,39 +89,254 @@
                     <div class="section-header">
                         <h2>Projects</h2>
                     </div>
-                    <div class="slideshow-container">
-                        <div class="slide fade">
-                            <img src="assets/images/SmartNote.png" alt="Smart Note App">
-                            <div class="slide-content">
+                    <div class="projects-grid">
+                        <!-- Project 1: Smart Note -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/SmartNote/SmartNote.png" alt="Smart Note Chrome Extension">
+                            </div>
+                            <div class="project-content">
                                 <h3>Smart Note</h3>
-                                <p>An AI-powered note-taking application that helps organize and categorize your notes automatically, making information retrieval effortless.</p>
+                                <p>A minimalist Chrome Extension for quick note-taking while browsing. Easily add and organize your ideas, tasks, and other important information in seconds.</p>
+                                <div class="project-tech">
+                                    <span>JavaScript</span>
+                                    <span>HTML/CSS</span>
+                                    <span>Chrome Extension</span>
+                                </div>
+                                <div class="project-actions">
+                                    <a href="https://chromewebstore.google.com/detail/smart-note/fibcjbmjkeggfgmbhildhcgglhjioolo" class="project-link" target="_blank">View Project</a>
+                                    <button class="learn-more-btn" data-project="smartnote">Learn More</button>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="slide fade">
-                            <img src="assets/images/ImageCompressor.png" alt="Image Compressor">
-                            <div class="slide-content">
-                                <h3>Image Compressor</h3>
-                                <p>A web-based tool that efficiently compresses images while maintaining quality, perfect for optimizing website performance.</p>
+                        
+                        <!-- Project 2: AI Web Card -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/AI WebCard/AI Web Card.png" alt="AI Web Card Chrome Extension">
+                            </div>
+                            <div class="project-content">
+                                <h3>AI Web Card</h3>
+                                <p>A Chrome extension that transforms web links into beautiful share cards with AI-powered summaries and QR codes.</p>
+                                <div class="project-tech">
+                                    <span>JavaScript</span>
+                                    <span>Chrome Extension</span>
+                                    <span>AI</span>
+                                    <span>QRCode.js</span>
+                                </div>
+                                <div class="project-actions">
+                                    <a href="https://chromewebstore.google.com/detail/ai-web-card/fkhcihejiljmoclodomjhfokcnfcljdp" class="project-link" target="_blank">View Project</a>
+                                    <button class="learn-more-btn" data-project="aiwebcard">Learn More</button>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="slide fade">
-                            <img src="assets/images/Project3.png" alt="Project 3">
-                            <div class="slide-content">
-                                <h3>Project Management Dashboard</h3>
-                                <p>A comprehensive project management tool that helps teams track progress, manage tasks, and visualize project timelines effectively.</p>
+                        
+                        <!-- Project 3: Weather Widget -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/Weather Widget/weather widget.png" alt="Weather Widget Chrome Extension">
+                            </div>
+                            <div class="project-content">
+                                <h3>Weather Widget</h3>
+                                <p>A beautiful and intuitive weather widget that displays real-time weather information with a dynamic UI that adapts to temperature changes.</p>
+                                <div class="project-tech">
+                                    <span>JavaScript (ES6+)</span>
+                                    <span>CSS3</span>
+                                    <span>Weather API</span>
+                                    <span>Manifest V3</span>
+                                </div>
+                                <div class="project-actions">
+                                    <a href="https://chromewebstore.google.com/detail/weather-widget/dhfgngjokgogdgjallckjfegehngmcjp" class="project-link" target="_blank">View Project</a>
+                                    <button class="learn-more-btn" data-project="weatherwidget">Learn More</button>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="dot-navigation">
-                            <span class="dot active"></span>
-                            <span class="dot"></span>
-                            <span class="dot"></span>
+                        
+                        <!-- Project 4: Screencast -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/Screencast/ScreenCast.png" alt="Screencast Chrome Extension">
+                            </div>
+                            <div class="project-content">
+                                <h3>Screencast</h3>
+                                <p>A simple and easy-to-use screenshot tool extension for Chrome browser, helping users quickly capture and save webpage content.</p>
+                                <div class="project-tech">
+                                    <span>JavaScript</span>
+                                    <span>HTML5 Canvas</span>
+                                    <span>Chrome Extension API</span>
+                                    <span>Manifest V3</span>
+                                </div>
+                                <div class="project-actions">
+                                    <a href="https://chromewebstore.google.com/detail/smart-note/fibcjbmjkeggfgmbhildhcgglhjioolo" class="project-link" target="_blank">View Project</a>
+                                    <button class="learn-more-btn" data-project="screencast">Learn More</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="projects-grid">
-                        <!-- Project cards will be added later -->
+                </div>
+            </div>
+            
+            <!-- Project Modals -->
+            <!-- Smart Note Modal -->
+            <div class="project-modal" id="modal-smartnote">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <div class="modal-gallery">
+                        <img src="assets/SmartNote/SmartNote.png" alt="Smart Note Chrome Extension">
+                    </div>
+                    <div class="modal-details">
+                        <h2>Smart Note</h2>
+                        <p class="project-description">
+                            Smart Note is a minimalist Chrome Extension for quick note-taking while browsing. With Smart Note, 
+                            you can easily add and organize your ideas, tasks, and other important information in seconds.
+                        </p>
+                        <div class="project-features">
+                            <h3>Key Features</h3>
+                            <ul>
+                                <li>📝 Auto-saving notes with visual confirmation</li>
+                                <li>📚 Chronological history view of all notes</li>
+                                <li>✏️ Inline editing capabilities</li>
+                                <li>🗑️ Secure deletion with undo option</li>
+                                <li>⌨️ Keyboard shortcuts for power users</li>
+                                <li>📋 One-click copy functionality</li>
+                                <li>✓ Note completion tracking</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech-stack">
+                            <h3>Development</h3>
+                            <div class="tech-tags">
+                                <span>HTML/CSS/JavaScript</span>
+                                <span>No external dependencies</span>
+                                <span>Modern JavaScript features</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://chromewebstore.google.com/detail/smart-note/fibcjbmjkeggfgmbhildhcgglhjioolo" class="btn primary-btn" target="_blank">Chrome Web Store</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- AI Web Card Modal -->
+            <div class="project-modal" id="modal-aiwebcard">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <div class="modal-gallery">
+                        <img src="assets/AI WebCard/AI Web Card.png" alt="AI Web Card Chrome Extension">
+                    </div>
+                    <div class="modal-details">
+                        <h2>AI Web Card</h2>
+                        <p class="project-description">
+                            A Chrome extension that transforms web links into beautiful share cards with AI-powered summaries and QR codes.
+                            This tool makes sharing web content more engaging and informative.
+                        </p>
+                        <div class="project-features">
+                            <h3>Key Features</h3>
+                            <ul>
+                                <li>Smart webpage content analysis with AI-generated summaries and key points</li>
+                                <li>Beautiful share cards with titles, summaries, key points, and QR codes</li>
+                                <li>Support for downloading cards as images or copying to clipboard</li>
+                                <li>Compatible with various webpage types including articles, videos, and e-commerce pages</li>
+                                <li>Supports Chrome, Edge, and other major browsers</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech-stack">
+                            <h3>Development</h3>
+                            <div class="tech-tags">
+                                <span>Chrome Extension Manifest V3</span>
+                                <span>Service Workers</span>
+                                <span>GLM-4-flash AI model</span>
+                                <span>QRCode.js</span>
+                                <span>html2canvas</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://chromewebstore.google.com/detail/ai-web-card/fkhcihejiljmoclodomjhfokcnfcljdp" class="btn primary-btn" target="_blank">Chrome Web Store</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Weather Widget Modal -->
+            <div class="project-modal" id="modal-weatherwidget">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <div class="modal-gallery">
+                        <img src="assets/Weather Widget/weather widget.png" alt="Weather Widget Chrome Extension">
+                    </div>
+                    <div class="modal-details">
+                        <h2>Weather Widget</h2>
+                        <p class="project-description">
+                            A beautiful and intuitive weather widget that displays real-time weather information with a dynamic UI 
+                            that adapts to temperature changes. Built with modern web technologies and featuring a sleek glass-morphism design.
+                        </p>
+                        <div class="project-features">
+                            <h3>Key Features</h3>
+                            <ul>
+                                <li>Real-time Weather Updates: Get current weather conditions instantly</li>
+                                <li>Dynamic UI: Background colors change based on temperature</li>
+                                <li>Location Detection: Automatic local weather with geolocation</li>
+                                <li>City Search: Look up weather for any city worldwide</li>
+                                <li>Detailed Information: Temperature, humidity, wind speed, and weather conditions</li>
+                                <li>Modern Design: Beautiful glass-morphism UI with smooth animations</li>
+                                <li>Responsive Layout: Adapts perfectly to different window sizes</li>
+                                <li>Offline Support: Graceful fallback to last known data</li>
+                                <li>Privacy Focused: No personal data storage or tracking</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech-stack">
+                            <h3>Development</h3>
+                            <div class="tech-tags">
+                                <span>Manifest V3</span>
+                                <span>QWeather API</span>
+                                <span>Modern JavaScript (ES6+)</span>
+                                <span>CSS3 with glass-morphism effects</span>
+                                <span>Responsive design</span>
+                                <span>Service Worker</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://chromewebstore.google.com/detail/weather-widget/dhfgngjokgogdgjallckjfegehngmcjp" class="btn primary-btn" target="_blank">Chrome Web Store</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Screencast Modal -->
+            <div class="project-modal" id="modal-screencast">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <div class="modal-gallery">
+                        <img src="assets/Screencast/ScreenCast.png" alt="Screencast Chrome Extension">
+                    </div>
+                    <div class="modal-details">
+                        <h2>Screencast</h2>
+                        <p class="project-description">
+                            A simple and easy-to-use screenshot tool extension for Chrome browser, helping users 
+                            quickly capture and save webpage content.
+                        </p>
+                        <div class="project-features">
+                            <h3>Key Features</h3>
+                            <ul>
+                                <li><strong>Area Selection Screenshot</strong>: Select and capture specific areas of a webpage with a semi-transparent overlay</li>
+                                <li><strong>Visible Area Screenshot</strong>: Capture the current visible area of a webpage with one click</li>
+                                <li><strong>Screenshot Editing</strong>: Add text annotations and crop screenshots in a new tab</li>
+                                <li><strong>Save & Share Options</strong>: Save screenshots or copy them to clipboard</li>
+                                <li><strong>Undo/Redo</strong>: Revert or restore editing actions</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech-stack">
+                            <h3>Development</h3>
+                            <div class="tech-tags">
+                                <span>Manifest V3</span>
+                                <span>Chrome Extension API</span>
+                                <span>HTML5 Canvas</span>
+                                <span>JavaScript DOM</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://chromewebstore.google.com/detail/smart-note/fibcjbmjkeggfgmbhildhcgglhjioolo" class="btn primary-btn" target="_blank">Chrome Web Store</a>
+                        </div>
                     </div>
                 </div>
             </div>

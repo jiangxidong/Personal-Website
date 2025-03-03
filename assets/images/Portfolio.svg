@@ -1,0 +1,32 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="80" fill="#0066FF" opacity="0.9"/>
+  <circle cx="50" cy="40" r="20" fill="white"/>
+  <rect x="600" y="30" width="40" height="5" rx="2" fill="white"/>
+  <rect x="650" y="30" width="40" height="5" rx="2" fill="white"/>
+  <rect x="700" y="30" width="40" height="5" rx="2" fill="white"/>
+  
+  <!-- Hero Section -->
+  <rect x="100" y="130" width="600" height="120" fill="#ffffff"/>
+  <circle cx="180" cy="190" r="50" fill="#e9ecef"/>
+  <rect x="250" y="160" width="200" height="15" rx="2" fill="#212529"/>
+  <rect x="250" y="190" width="350" height="10" rx="2" fill="#6c757d"/>
+  <rect x="250" y="210" width="300" height="10" rx="2" fill="#6c757d"/>
+  
+  <!-- Projects Section -->
+  <rect x="100" y="300" width="280" height="200" rx="5" fill="#ffffff" stroke="#dee2e6" stroke-width="2"/>
+  <rect x="100" y="300" width="280" height="120" fill="#e9ecef" rx="5 5 0 0"/>
+  <rect x="120" y="440" width="150" height="15" rx="2" fill="#212529"/>
+  <rect x="120" y="465" width="240" height="10" rx="2" fill="#6c757d"/>
+  
+  <rect x="420" y="300" width="280" height="200" rx="5" fill="#ffffff" stroke="#dee2e6" stroke-width="2"/>
+  <rect x="420" y="300" width="280" height="120" fill="#e9ecef" rx="5 5 0 0"/>
+  <rect x="440" y="440" width="150" height="15" rx="2" fill="#212529"/>
+  <rect x="440" y="465" width="240" height="10" rx="2" fill="#6c757d"/>
+  
+  <!-- Text "Portfolio" -->
+  <text x="400" y="550" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#0066FF">Personal Portfolio</text>
+</svg> 

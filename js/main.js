@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let slideInterval;
 
     function showSlide(n) {
+        // Check if slides exist
+        if (slides.length === 0) return;
+        
         // Reset slide index if out of bounds
         if (n >= slides.length) currentSlide = 0;
         if (n < 0) currentSlide = slides.length - 1;
@@ -17,12 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // Hide all slides
         for (let i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
-            dots[i].classList.remove("active");
+            if (dots[i]) dots[i].classList.remove("active");
         }
 
         // Show current slide
         slides[currentSlide].style.display = "block";
-        dots[currentSlide].classList.add("active");
+        if (dots[currentSlide]) dots[currentSlide].classList.add("active");
     }
 
     function nextSlide() {
@@ -61,8 +64,10 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector(`[data-tab="${tabId}"]`).classList.add('active');
         document.querySelector(`#${tabId}`).classList.add('active');
 
-        // Initialize slideshow when switching to projects tab
+        // Initialize functionality when switching to projects tab
         if (tabId === 'projects') {
+            initProjectModals();
+            // Keep slideshow initialization for backward compatibility
             initSlideshow();
         }
     };
@@ -86,9 +91,62 @@ document.addEventListener('DOMContentLoaded', () => {
     const initialHash = window.location.hash.slice(1) || 'home';
     switchTab(initialHash);
 
-    // Initialize slideshow if we start on the projects page
+    // Project Modal Functionality
+    function initProjectModals() {
+        const learnMoreButtons = document.querySelectorAll('.learn-more-btn');
+        const closeModalButtons = document.querySelectorAll('.close-modal');
+        const projectModals = document.querySelectorAll('.project-modal');
+
+        // Open modal when Learn More button is clicked
+        learnMoreButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const projectId = button.getAttribute('data-project');
+                const modal = document.getElementById(`modal-${projectId}`);
+                if (modal) {
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling
+                }
+            });
+        });
+
+        // Close modal when close button is clicked
+        closeModalButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const modal = button.closest('.project-modal');
+                if (modal) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = ''; // Re-enable scrolling
+                }
+            });
+        });
+
+        // Close modal when clicking outside the modal content
+        projectModals.forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = ''; // Re-enable scrolling
+                }
+            });
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                projectModals.forEach(modal => {
+                    if (modal.classList.contains('active')) {
+                        modal.classList.remove('active');
+                        document.body.style.overflow = ''; // Re-enable scrolling
+                    }
+                });
+            }
+        });
+    }
+
+    // Initialize if we start on the projects page
     if (initialHash === 'projects') {
-        initSlideshow();
+        initProjectModals();
+        initSlideshow(); // Keep for backward compatibility
     }
 
     // Navbar scroll effect
